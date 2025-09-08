@@ -6,6 +6,9 @@ sed -i -e 's/192.168.1.1/192.168.10.5/g' -e 's/kenzo/OpenWrt/g' openwrt/package/
 # Modify default theme (正确路径)
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' openwrt/feeds/luci/collections/luci/Makefile
 
+# Modify hostname
+sed -i 's/LEDE/OpenWrt/g' openwrt/package/base-files/files/bin/config_generate
+
 # 添加iStoreOS风格的首页和网络向导
 echo "Adding iStoreOS-style homepage and network wizard..."
 
